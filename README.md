@@ -12,8 +12,8 @@ def get_password(username):
     else:
         return None
 def main():
-    print("_Password Manager_")
-    print("-----")
+    print("_______Password Manager________")
+    print("--------------------")
     while True:
         print("\nOptions:")
         print("1. Add Password")
