@@ -24,7 +24,7 @@ def main():
             username = input("Enter username: ")
             password = input("Enter password: ")
             add_password(username, password)
-            print("Password added successfully!")
+            print("Password added Successfully!")
         elif choice == '2':
             username = input("Enter username: ")
             password = get_password(username)
