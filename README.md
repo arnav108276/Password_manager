@@ -1,11 +1,11 @@
-import mysql.connector as co
-con=co.connect(host='localhost',user='root',database='devops',passwd='passkey=00')
+import mysql.connector as c
+con=c.connect(host='localhost',user='root',database='devops',passwd='passkey=00')
 cursor=con.cursor()
 def add_password(username, password):
     cursor.execute("INSERT INTO password (Username, Password) VALUES ({},{})".format(username,password))
     con.commit()
 def get_password(username):
-    cursor.execute("SELECT password FROM Password WHERE Username = {}".format(username))
+    cursor.execute("SELECT password FROM Password where Username = {}".format(username))
     result = cursor.fetchone()
     if result:
         return result[0]
