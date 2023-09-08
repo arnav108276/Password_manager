@@ -13,7 +13,7 @@ def get_password(username):
         return None
 def main():
     print("_______Password Manager________")
-    print("--------------------")
+    print("-------------------------------")
     while True:
         print("\nOptions:")
         print("1. Add Password")
@@ -35,7 +35,7 @@ def main():
         elif choice == '3':
             break
         else:
-            print("Invalid choice. Please select a valid option.")
+            print("Please select a valid option.")
     print("Goodbye!")
 main()
 
