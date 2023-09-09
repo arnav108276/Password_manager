@@ -5,11 +5,15 @@ def add_password(username, password,website):
     cursor.execute("INSERT INTO password (Username, Password,website) VALUES ({},{},{})".format(username,password,website))
     con.commit()
 def table():
-    print("(Username , Website )")
+    print("__________________")
+    print("[Username , Website ]")
+    print("---------------------------")
     cursor.execute("SELECT Username,website from password")
     r=cursor.fetchall()
     for i in r:
-        print(i)
+        L=list(i)
+        print(L)
+    print("    ")
 def get_password(username):
     cursor.execute("SELECT Password FROM Password where Username = {}".format(username))
     result = cursor.fetchone()
@@ -19,7 +23,7 @@ def get_password(username):
         return None
 def main():
     print("_______Password Manager________")
-    print("----------------------------------")
+    print("----------------------------------------------")
     while True:
         print("\nOptions:")
         print("1. Add Password")
