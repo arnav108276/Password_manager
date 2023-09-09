@@ -41,8 +41,13 @@ def main():
             print("Password added Successfully!")
         elif choice == '2':
             a=table()
-            
-            
+             if a!=-1:
+                 username = input("Enter username: ")
+                 password = get_password(username)
+                 if password:
+                     print(f"Password for {username}: {password}")
+                 else:
+                     print(f"No password found for {username}")
         elif choice == '3':
             break
         else:
