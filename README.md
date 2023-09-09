@@ -11,7 +11,7 @@ def table():
     for i in r:
         print(i)
 def get_password(username):
-    cursor.execute("SELECT password FROM Password where Username = {}".format(username))
+    cursor.execute("SELECT Password FROM Password where Username = {}".format(username))
     result = cursor.fetchone()
     if result:
         return result[0]
