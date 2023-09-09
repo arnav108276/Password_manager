@@ -5,13 +5,17 @@ def add_password(username, password,website):
     cursor.execute("INSERT INTO password (Username, Password,website) VALUES ({},{},{})".format(username,password,website))
     con.commit()
 def table():
-    print("__________________")
-    print("[Username , Website ]")
     cursor.execute("SELECT Username,website from password")
     r=cursor.fetchall()
-    for i in r:
-        L=list(i)
-        print(L)
+    if r:
+        print("__________________")
+        print("[Username , Website ]")
+        for i in r:
+            L=list(i)
+            print(L)
+    else:
+        print("No saved password")
+        return -1
     print("    ")
 def get_password(username):
     cursor.execute("SELECT Password FROM Password where Username = {}".format(username))
@@ -36,13 +40,9 @@ def main():
             add_password(username, password,website)
             print("Password added Successfully!")
         elif choice == '2':
-            table()
-            username = input("Enter username: ")
-            password = get_password(username)
-            if password:
-                print(f"Password for {username}: {password}")
-            else:
-                print(f"No password found for {username}")
+            a=table()
+            
+            
         elif choice == '3':
             break
         else:
