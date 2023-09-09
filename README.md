@@ -8,7 +8,7 @@ def table():
     cursor.execute("SELECT Username,website from password")
     r=cursor.fetchall()
     if r:
-        print("__________________")
+        print("____________________")
         print("[Username , Website ]")
         for i in r:
             L=list(i)
@@ -16,7 +16,7 @@ def table():
     else:
         print("No saved password")
         return -1
-    print("    ")
+    print("      ")
 def get_password(username):
     cursor.execute("SELECT Password FROM Password where Username = {}".format(username))
     result = cursor.fetchone()
