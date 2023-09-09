@@ -4,7 +4,8 @@ cursor=con.cursor()
 def add_password(username, password,website):
     cursor.execute("INSERT INTO password (Username, Password,website) VALUES ({},{},{})".format(username,password,website))
     con.commit()
-def table(website):
+def table():
+    print("(Username , Website )")
     cursor.execute("SELECT Username,website from password")
     r=cursor.fetchall()
     for i in r:
@@ -28,12 +29,11 @@ def main():
         if choice == '1':
             username = input("Enter username: ")
             password = input("Enter password: ")
-            wesite = input("Enter website name: ")
+            website = input("Enter website name: ")
             add_password(username, password,website)
             print("Password added Successfully!")
         elif choice == '2':
-            website = input("Enter website: ")
-            table(website)
+            table()
             username = input("Enter username: ")
             password = get_password(username)
             if password:
