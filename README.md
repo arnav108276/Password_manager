@@ -52,6 +52,7 @@ def main():
             break
         else:
             print("Please select a valid option.")
+            continue
     print("Goodbye!")
 main()
 
