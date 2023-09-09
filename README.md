@@ -7,7 +7,6 @@ def add_password(username, password,website):
 def table():
     print("__________________")
     print("[Username , Website ]")
-    print("---------------------------")
     cursor.execute("SELECT Username,website from password")
     r=cursor.fetchall()
     for i in r:
