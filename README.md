@@ -8,7 +8,7 @@ def table():
     cursor.execute("SELECT Username,website from password")
     r=cursor.fetchall()
     if r:
-        print("____________________")
+        print("_____________________")
         print("[Username , Website ]")
         for i in r:
             L=list(i)
