@@ -53,6 +53,6 @@ def main():
         else:
             print("Please select a valid option.")
             continue
-    print("Goodbye!")
+    print("goodbye!")
 main()
 
