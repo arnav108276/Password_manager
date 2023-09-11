@@ -5,7 +5,7 @@ def add_password(username, password,website):
     cursor.execute("INSERT INTO password (Username, Password,website) VALUES ({},{},{})".format(username,password,website))
     con.commit()
 def table():
-    cursor.execute("SELECT Username,website from password")
+    cursor.execute("SELECT Username,Website from password")
     r=cursor.fetchall()
     if r:
         print("_____________________")
