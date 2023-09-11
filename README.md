@@ -42,7 +42,7 @@ def main():
         elif choice == '2':
             a=table()
              if a!=-1:
-                 username = input("Enter username: ")
+                 username = input("Enter username:  ")
                  password = get_password(username)
                  if password:
                      print(f"Password for {username}: {password}")
