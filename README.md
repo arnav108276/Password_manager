@@ -1,4 +1,4 @@
-_`**Password_Manager**`_
+# Password_Manager
 
 _This project is a computer program that allows users to store and manage their passwords for local applications or online services such as web applications, online shops or social media.
 This project has been made using python and sql (Backend).
