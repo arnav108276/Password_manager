@@ -4,3 +4,5 @@ CREATE TABLE password("
                    "Password VARCHAR(255) NOT NULL,"
                    "website VARCHAR(255) NOT NULL"
                    ")
+
+
